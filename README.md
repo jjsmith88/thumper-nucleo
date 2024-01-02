@@ -64,6 +64,7 @@ Supported Hardware listed on their site:
 *  ST NUCLEO-F446ZE
 *  ST NUCLEO-F746ZG
 *  ST NUCLEO-H743ZI
+
 The ST NUCLEO-F446RE is in the same family as the ST NUCLEO-F446ZE so there is a good chance that it will work the same but further investigation is needed here.
 
 micro-ROS utlizies an RTOS and for this project FreeRTOS will be used.
