@@ -51,3 +51,21 @@ Each version is also optionally available with an integrated 48 CPR quadrature e
 Exact gear ratio: (22/12)×(20/12)×(22/10)×(22/10)×(22/10)×(23/10)≈74.83:1
 
 ## [micro-ROS](https://micro.ros.org/)
+Micro-ROS offers seven key features:
+*  Microcontroller-optimized client API supporting all major ROS concepts
+*  Seamless integration with ROS 2
+*  Extremely resource-constrained but flexible middleware
+*  Multi-ROS support with generic build system
+*  Permissive license
+*  Vibrant community and ecosystem
+*  Long-term maintainability and interoperability
+
+Supported Hardware listed on their site:
+*  ST NUCLEO-F446ZE
+*  ST NUCLEO-F746ZG
+*  ST NUCLEO-H743ZI
+The ST NUCLEO-F446RE is in the same family as the ST NUCLEO-F446ZE so there is a good chance that it will work the same but further investigation is needed here.
+
+micro-ROS utlizies an RTOS and for this project FreeRTOS will be used.
+
+Vulcanexus is an all-in-one ROS 2 tool set for easy and customized robotics development.
