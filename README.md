@@ -70,3 +70,5 @@ The ST NUCLEO-F446RE is in the same family as the ST NUCLEO-F446ZE so there is a
 micro-ROS utlizies an RTOS and for this project FreeRTOS will be used.
 
 Vulcanexus is an all-in-one ROS 2 tool set for easy and customized robotics development.
+
+[STM32CubeMX micro-ROS integration](https://github.com/micro-ROS/micro_ros_stm32cubemx_utils)
