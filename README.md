@@ -5,7 +5,10 @@ STM32F446RE Nucleo Board + VNH5019 Motor Driver + Nucleo Motion MEMS
 
 ## [STM32F446RE Nucleo Board](https://www.st.com/en/microcontrollers-microprocessors/stm32f446re.html)
 Main brain of the system designed to:
+*  Use micro-ROS with FreeRTOS to build ROS compliant node
+*  FreeRTOS will also be used to generate main control flow of node: sense -> plan -> act
 *  Run PID loop control of PWM output to Motor Driver
+*  Sense current through the VNH5019 Motor Driver for PID loop control and protection of the motors
 *  Read the encoder outputs of the motors & generate velocity measurements
 *  Read the motion MEMS to get accelerometer, gryroscope, magnometer, and temperature measurements
 
