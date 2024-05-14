@@ -13,7 +13,7 @@ Main brain of the system designed to:
 *  Read the motion MEMS to get accelerometer, gryroscope, magnometer, and temperature measurements
 
 ## [VNH5019 Motor Driver](https://www.pololu.com/product/2507)
-H bridge control board designed to handle the stall current of the motors.
+H bridge control board designed to handle the stall current for the bank of three motors per H bridge.
 
 Arduino style headers are the main way to connect to the STM32 Nucleo board.
 
@@ -22,7 +22,7 @@ Arduino style headers are the main way to connect to the STM32 Nucleo board.
 Current sense voltage output proportional to motor current (approx. 140 mV/A; only active while H-bridge is driving)
 
 ## [Nucleo Motion MEMS](https://www.st.com/en/ecosystems/x-nucleo-iks01a3.html)
-Sensors connected over I²C to STM32 Nucleo through Arduino and Nucleo headers.
+IMU Sensors connected over I²C to STM32 Nucleo through Arduino and Nucleo headers.
 
 Sensor Information:
 *  LSM6DSO: MEMS 3D accelerometer (±2/±4/±8/±16 g) + 3D gyroscope (±125/±250/±500/±1000/±2000 dps).
@@ -39,9 +39,11 @@ The Wild Thumper Chassis is a differential-drive chassis so turning is accomplis
 
 Chassis is designed to be operated with 3 motors + wheels of one side connected to singular output of motor driver.
 
-There is a built in suspension to help keep the wheels pushed to the ground when driving over rough terain.
+There is a built in suspension to help keep the wheels pushed to the ground when driving over rough terain to maintain traction with the wheels.
 
-An encoder is attached to the middle wheel of each side to get an idea of how fast each group of motors is running.
+An encoder is attached to the middle wheel of each side to get an idea of how fast each group of motors is running. The middle wheel pair are selected because the Wild Thumper Chassis always pushes both of those down using the suspension versus the other pairs of wheels which will react to one another, i.e. if one wheel is pushed up then it will force the opposing wheel down. This design ensures that the motos with the encoders are always trying to make contact with the ground.
+
+Initial control will be velocity based meaning that the Wild Thumper will recieve a target velocity for each bank of motors that it will try to maintain through the PID loop. Position control will be the next step and will be relative positioning using both encoders to determine the distance traveled and relative position from the starting point.
 
 ## [Motors + Encoders](https://www.pololu.com/product/1575)
 The motors are intended for a maximum nominal operating voltage of 7.2 V (2 V minimum), and each has a stall current of 6.6 A and a no-load current of 420 mA at 7.2 V.
@@ -52,6 +54,8 @@ direction to full speed in the other), we recommend a motor driver capable of su
 Each version is also optionally available with an integrated 48 CPR quadrature encoder.
 
 Exact gear ratio: (22/12)×(20/12)×(22/10)×(22/10)×(22/10)×(23/10)≈74.83:1
+
+The encoders will first be used to calculate the velocity of the motors to be used for the PID control loop as feedback of the target velocity. Later implementation will then use the encoder counts for relative positioning.
 
 ## [micro-ROS](https://micro.ros.org/)
 Micro-ROS offers seven key features:
