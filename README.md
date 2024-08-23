@@ -10,7 +10,7 @@ Main brain of the system designed to:
 *  Run PID loop control of PWM output to Motor Driver
 *  Sense current through the VNH5019 Motor Driver for PID loop control and protection of the motors
 *  Read the encoder outputs of the motors & generate velocity measurements
-*  Read the motion MEMS to get accelerometer, gryroscope, magnometer, and temperature measurements
+*  Read the motion MEMS to get accelerometer, gyroscope, magnometer, and temperature measurements
 
 ## [VNH5019 Motor Driver](https://www.pololu.com/product/2507)
 H bridge control board designed to handle the stall current for the bank of three motors per H bridge.
