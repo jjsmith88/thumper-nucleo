@@ -3,7 +3,7 @@ Wild Thumper motor driver project.
 
 STM32F446RE Nucleo Board + VNH5019 Motor Driver + Nucleo Motion MEMS
 
-Development Environment: VS Code + STM32 VS Code Extension + STM32CubeMX + ST-MCU-FINDER
+Development Environment: VS Code + STM32 VS Code Extension + STM32CubeMX + STM32CubeCLT + ST-MCU-FINDER
 
 ## [STM32F446RE Nucleo Board](https://www.st.com/en/microcontrollers-microprocessors/stm32f446re.html)
 Main brain of the system designed to:
