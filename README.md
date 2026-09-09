@@ -23,7 +23,7 @@ Arduino style headers are the main way to connect to the STM32 Nucleo board.
 
 Current sense voltage output proportional to motor current (approx. 140 mV/A; only active while H-bridge is driving)
 
-Supporting code found ![here](https://github.com/pololu/dual-vnh5019-motor-shield).
+Supporting code found [here](https://github.com/pololu/dual-vnh5019-motor-shield).
 
 ## [Nucleo Motion MEMS](https://www.st.com/en/ecosystems/x-nucleo-iks01a3.html)
 IMU Sensors connected over I²C to STM32 Nucleo through Arduino and Nucleo headers.
